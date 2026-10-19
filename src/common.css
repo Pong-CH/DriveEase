@@ -1,0 +1,162 @@
+/* Reusable styles keep long, repeated class lists out of the HTML. */
+
+/* Scroll through the complete fleet with touch, trackpad, keyboard, or arrows. */
+.car-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 1.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0 1.25rem;
+  scrollbar-color: #128477 transparent;
+  scrollbar-width: thin;
+}
+.car-scroll > .car-card {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+.car-scroll-arrow {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid #128477;
+  border-radius: 50%;
+  color: #128477;
+  font-size: 1.25rem;
+  background: white;
+}
+.car-scroll-arrow:hover:not(:disabled) {
+  background: #128477;
+  color: white;
+}
+.car-scroll-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.dark .car-scroll-arrow {
+  background: var(--color-slate-900);
+  color: var(--color-teal-300);
+  border-color: var(--color-teal-300);
+}
+@media (min-width: 768px) {
+  .car-scroll {
+    grid-auto-columns: calc((100% - 1.5rem) / 2);
+  }
+}
+@media (min-width: 1024px) {
+  .car-scroll {
+    grid-auto-columns: calc((100% - 3rem) / 3);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .car-scroll {
+    scroll-behavior: auto;
+  }
+}
+
+/* Vehicle specifications in the details popup. */
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 0.75rem;
+  color: var(--color-navy);
+  transition: all 0.15s;
+}
+.spec-item:hover {
+  translate: 0 -0.125rem;
+  border-color: rgb(24 169 153 / 60%);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+.dark .spec-item {
+  border-color: var(--color-slate-700);
+  color: var(--color-slate-100);
+}
+.dark .spec-item:hover {
+  border-color: color-mix(in oklab, var(--color-teal-500) 60%, transparent);
+}
+
+/* Close buttons used by the two popups. */
+.info-close,
+.detail-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: var(--color-accent);
+}
+.info-close {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  color: var(--color-accent);
+}
+.info-close:hover {
+  background: var(--color-teal-50);
+}
+.dark .info-close:hover {
+  background: var(--color-slate-800);
+}
+.detail-close {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-width: 2px;
+  border-radius: 0.75rem;
+  color: var(--color-navy);
+  transition: all 0.15s;
+}
+.detail-close:hover {
+  background: var(--color-accent);
+  color: white;
+}
+.detail-close:active {
+  scale: 0.95;
+}
+.detail-close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.dark .detail-close {
+  color: white;
+}
+.dark .detail-close:hover {
+  background: var(--color-teal-500);
+  color: var(--color-slate-950);
+}
+
+/* Standard selectors replace the harder Tailwind bracket expressions. */
+.dark .select-options > option {
+  color: var(--color-slate-900);
+}
+.faq-marker::-webkit-details-marker {
+  display: none;
+}
+
+/* Keep the existing desktop column sizes. */
+@media (min-width: 1024px) {
+  .footer-columns {
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  }
+  .search-columns {
+    grid-template-columns: 1.2fr 1fr 1fr auto;
+  }
+  .browse-columns {
+    grid-template-columns: 295px 1fr;
+  }
+  .booking-columns {
+    grid-template-columns: 1fr 360px;
+  }
+  .story-columns {
+    grid-template-columns: 580px 1fr;
+  }
+  .about-columns {
+    grid-template-columns: 1fr 247px;
+  }
+}

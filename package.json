@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "tsc && tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "watch:ts": "tsc --watch",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  },
+  "name": "driveease-cambodia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "preline": "^4.2.0"
+  }
+}

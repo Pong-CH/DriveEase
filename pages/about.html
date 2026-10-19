@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="../dist/theme.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us | DriveEase Cambodia</title>
+
+    <link rel="stylesheet" href="../src/output.css" />
+    <meta name="theme-color" content="#142B4A" />
+
+    <meta
+      name="description"
+      content="Discover the idea behind DriveEase, a student car rental website built around freedom, comfort, and thoughtful journeys."
+    />
+    <meta property="og:title" content="About us | DriveEase Cambodia" />
+    <meta
+      property="og:description"
+      content="Discover the idea behind DriveEase, a student car rental website built around freedom, comfort, and thoughtful journeys."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="./about.html" />
+    <meta property="og:image" content="../images/banner.webp" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+  </head>
+  <body class="bg-page antialiased dark:bg-slate-950">
+    <noscript>
+      Please enable JavaScript to view the car catalogue and use booking or contact forms.
+    </noscript>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="navbar" class="sticky top-0 z-50">
+      <header
+        class="border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95"
+      >
+        <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-5 px-5">
+          <a data-nav="home" href="../index.html" aria-label="DriveEase home">
+            <img
+              src="../images/logo.png"
+              class="brand-logo dark:hidden"
+              alt="DriveEase"
+              width="142"
+              height="56"
+            />
+            <img
+              src="../images/dark-logo.png"
+              class="brand-logo hidden dark:block"
+              alt="DriveEase"
+              width="142"
+              height="56"
+            />
+          </a>
+          <nav
+            aria-label="Main navigation"
+            class="hidden items-center gap-8 text-sm font-medium md:flex"
+          >
+            <a data-nav="home" href="../index.html">Home</a>
+            <a data-nav="cars" href="../pages/browse-cars.html">Browse cars</a>
+            <a data-nav="about" href="../pages/about.html">About us</a>
+            <a data-nav="contact" href="../pages/contact.html">Contact</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <button
+              id="theme-toggle"
+              type="button"
+              class="rounded-full border border-slate-200 p-2.5 dark:border-slate-700"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+            >
+              <svg class="h-5 w-5 dark:hidden" aria-hidden="true">
+                <use href="../images/icons.svg#icon-1"></use></svg
+              ><svg class="hidden h-5 w-5 dark:block" aria-hidden="true">
+                <use href="../images/icons.svg#icon-2"></use>
+              </svg>
+            </button>
+            <a href="../pages/browse-cars.html" class="btn-primary hidden text-sm lg:inline-flex">
+              Find your car
+              <span aria-hidden="true">↗</span>
+            </a>
+            <button
+              id="menu-toggle"
+              class="rounded-lg border border-slate-200 p-2.5 md:hidden dark:border-slate-700"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg width="22" height="22" aria-hidden="true">
+                <use href="../images/icons.svg#icon-3"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile navigation"
+          class="hidden border-t border-slate-200 px-5 py-5 md:hidden dark:border-slate-700"
+        >
+          <ul class="space-y-4">
+            <li><a data-nav="home" href="../index.html">Home</a></li>
+            <li><a data-nav="cars" href="../pages/browse-cars.html">Browse cars</a></li>
+            <li><a data-nav="about" href="../pages/about.html">About us</a></li>
+            <li><a data-nav="contact" href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <main class="bg-page dark:bg-slate-950" id="main-content">
+      <!-- Hero -->
+      <section class="relative overflow-hidden">
+        <img
+          src="../images/about-banner.webp"
+          alt=""
+          aria-hidden="true"
+          class="absolute inset-0 h-full w-full object-cover object-[70%_center] dark:brightness-75"
+        />
+        <div
+          class="absolute inset-0 bg-linear-to-r from-white/80 via-white/20 to-transparent dark:from-slate-950/90 dark:via-slate-950/50 dark:to-slate-950/10"
+        ></div>
+        <div
+          class="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-page to-transparent dark:from-slate-950"
+        ></div>
+
+        <div class="relative mx-auto max-w-[1440px] px-5 py-14 md:min-h-84 md:py-16">
+          <h1
+            class="font-display text-4xl leading-tight font-extrabold tracking-tight text-navy sm:text-5xl lg:text-6xl dark:text-white"
+          >
+            Your Journey,
+            <br />
+            Our
+            <span class="text-accent">Priority.</span>
+          </h1>
+          <p class="mt-5 max-w-xl text-lg text-slate-700 dark:text-slate-200">
+            At DriveEase, we make every journey simple, comfortable, and convenient. Discover the
+            freedom of driving with flexible rental options and vehicles for every adventure.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="./browse-cars.html"
+              class="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-md shadow-accent/30 transition hover:-translate-y-0.5 hover:bg-primary hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+            >
+              Explore Our Cars
+            </a>
+            <a
+              href="./contact.html"
+              class="rounded-lg border-2 border-accent bg-white px-6 py-3 text-sm font-semibold text-navy transition hover:-translate-y-0.5 hover:bg-teal-50 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our story -->
+      <section aria-labelledby="story-title" class="mx-auto max-w-[1440px] px-5 pt-10">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <p
+              class="text-xs font-semibold tracking-wider text-deep-green uppercase dark:text-teal-300"
+            >
+              Our Story
+            </p>
+            <h2
+              id="story-title"
+              class="mt-2 font-display text-3xl font-bold text-navy dark:text-white"
+            >
+              Making Every Journey Better
+            </h2>
+            <p class="mt-4 max-w-lg text-slate-600 dark:text-slate-300">
+              DriveEase is a student car rental website designed to help travelers explore suitable
+              vehicles for business trips, family vacations, and everyday travel. We focus on
+              convenience, transparent pricing, and a smooth booking experience.
+            </p>
+            <p class="mt-4 max-w-lg text-slate-600 dark:text-slate-300">
+              Our goal is to make renting a car simple, accessible, and stress-free.
+            </p>
+
+            <dl class="mt-10 flex divide-x divide-slate-200 dark:divide-slate-700">
+              <div class="flex flex-col-reverse pr-6">
+                <dt class="text-sm text-slate-500 dark:text-slate-400">Pickup cities</dt>
+                <dd class="text-3xl font-bold text-accent">4</dd>
+              </div>
+              <div class="flex flex-col-reverse px-6">
+                <dt class="text-sm text-slate-500 dark:text-slate-400">Sample vehicles</dt>
+                <dd class="text-3xl font-bold text-accent">6</dd>
+              </div>
+              <div class="flex flex-col-reverse pl-6">
+                <dt class="text-sm text-slate-500 dark:text-slate-400">Account needed</dt>
+                <dd class="text-3xl font-bold text-accent">None</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="overflow-hidden rounded-xl shadow-md">
+            <img
+              src="../images/our-story.webp"
+              alt="The DriveEase team standing in front of rental cars in the showroom"
+              class="aspect-[1.88] w-full object-cover transition duration-500 hover:scale-105 motion-reduce:transition-none motion-reduce:hover:scale-100"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & vision -->
+      <section aria-labelledby="mission-title" class="mx-auto mt-14 max-w-[1440px] px-5">
+        <div
+          class="grid items-center gap-6 rounded-2xl border border-teal-100 bg-[#E8F6F3] p-6 sm:p-8 about-columns dark:border-teal-900/60 dark:bg-teal-950/40"
+        >
+          <div>
+            <p
+              class="text-xs font-semibold tracking-wider text-deep-green uppercase dark:text-teal-300"
+            >
+              Our Mission &amp; Vision
+            </p>
+            <h2
+              id="mission-title"
+              class="mt-2 font-display text-3xl font-bold text-navy dark:text-white"
+            >
+              Our Goals for a Better Tomorrow
+            </h2>
+
+            <div
+              class="mt-6 grid gap-6 md:grid-cols-2 md:gap-0 md:divide-x md:divide-teal-900/10 dark:md:divide-white/10"
+            >
+              <div class="group flex gap-4 md:pr-6">
+                <span
+                  class="flex h-18 w-18 shrink-0 items-center justify-center rounded-2xl bg-[#CFEEE8] text-teal-700 transition duration-300 group-hover:scale-105 group-hover:text-white motion-reduce:transition-none dark:bg-teal-900 dark:text-teal-200 dark:group-hover:text-teal-950"
+                >
+                  <img src="../images/misson.png" alt="" />
+                </span>
+                <div>
+                  <h3 class="font-semibold text-navy dark:text-white">Our Mission</h3>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                    To provide a convenient and reliable car rental experience with suitable
+                    vehicles and clear rental information.
+                  </p>
+                </div>
+              </div>
+
+              <div class="group flex gap-4 md:pl-6">
+                <span
+                  class="flex h-18 w-18 shrink-0 items-center justify-center rounded-2xl bg-[#CFEEE8] text-teal-700 transition duration-300 group-hover:scale-105 group-hover:text-white motion-reduce:transition-none dark:bg-teal-900 dark:text-teal-200 dark:group-hover:text-teal-950"
+                >
+                  <img src="../images/vision.png" alt="" />
+                </span>
+                <div>
+                  <h3 class="font-semibold text-navy dark:text-white">Our Vision</h3>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                    To become a trusted
+                    <span class="font-medium text-deep-green dark:text-teal-300">
+                      choice for customers
+                    </span>
+                    seeking flexible and comfortable transportation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-xl shadow-md">
+            <img
+              src="../images/our-mission.webp"
+              alt="A car driving along a scenic coastal road"
+              class="aspect-[1.5] w-full object-cover transition duration-500 hover:scale-105 motion-reduce:transition-none motion-reduce:hover:scale-100"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Why choose us -->
+      <section aria-labelledby="why-title" class="mx-auto max-w-[1440px] px-5 pt-14">
+        <p
+          class="text-xs font-semibold tracking-wider text-deep-green uppercase dark:text-teal-300"
+        >
+          Why Choose Us
+        </p>
+        <h2 id="why-title" class="mt-2 font-display text-3xl font-bold text-navy dark:text-white">
+          The DriveEase Difference
+        </h2>
+
+        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article
+            class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-teal-500/50 dark:hover:shadow-black/40"
+          >
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition duration-300 group-hover:text-white dark:bg-teal-900 dark:text-teal-200 dark:group-hover:text-teal-950"
+            >
+              <img src="../images/Car_svg.png" alt="car-svg" />
+            </span>
+            <h3 class="mt-4 font-semibold text-navy dark:text-white">Wide Vehicle Selection</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+              From economy to luxury, we have the right car for you.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-teal-500/50 dark:hover:shadow-black/40"
+          >
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition duration-300 group-hover:text-white dark:bg-teal-900 dark:text-teal-200 dark:group-hover:text-teal-950"
+            >
+              <img src="../images/tag_svg.png" alt="tag-img" />
+            </span>
+            <h3 class="mt-4 font-semibold text-navy dark:text-white">Affordable Rates</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+              Transparent pricing with no hidden fees.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-teal-500/50 dark:hover:shadow-black/40"
+          >
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition duration-300 group-hover:text-white dark:bg-teal-900 dark:text-teal-200 dark:group-hover:text-teal-950"
+            >
+              <img src="../images/calendar_svg.png" alt="calendar-img" />
+            </span>
+            <h3 class="mt-4 font-semibold text-navy dark:text-white">Easy Booking</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+              Book in minutes with our simple process.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-teal-500/50 dark:hover:shadow-black/40"
+          >
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition duration-300 group-hover:text-white dark:bg-teal-900 dark:text-teal-200 dark:group-hover:text-teal-950"
+            >
+              <img src="../images/head-phone.png" alt="" />
+            </span>
+            <h3 class="mt-4 font-semibold text-navy dark:text-white">24/7 Support</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+              We're always here to help, whenever you need us.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Core values -->
+      <section aria-labelledby="values-title" class="mx-auto max-w-[1440px] px-5 py-16">
+        <div class="grid items-center gap-10 story-columns">
+          <div class="overflow-hidden rounded-xl shadow-md">
+            <img
+              src="../images/our-value.webp"
+              alt="A DriveEase staff member showing rental options on a tablet to a customer"
+              class="aspect-[2.32] w-full object-cover transition duration-500 hover:scale-105 motion-reduce:transition-none motion-reduce:hover:scale-100"
+            />
+          </div>
+
+          <div>
+            <p
+              class="text-xs font-semibold tracking-wider text-deep-green uppercase dark:text-teal-300"
+            >
+              Our Core Values
+            </p>
+            <h2
+              id="values-title"
+              class="mt-2 font-display text-3xl font-bold text-navy dark:text-white"
+            >
+              Built on Trust, Driven by You
+            </h2>
+
+            <ul class="mt-5 space-y-2">
+              <li
+                class="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-white hover:shadow-sm dark:hover:bg-slate-900"
+              >
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white transition duration-300 group-hover:scale-110"
+                >
+                  <img src="../images/i-shield.png" alt="shield" />
+                </span>
+                <div>
+                  <h3 class="text-sm font-semibold text-navy dark:text-white">
+                    Trust &amp; Transparency
+                  </h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
+                    We present rental terms and prices clearly.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-white hover:shadow-sm dark:hover:bg-slate-900"
+              >
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white transition duration-300 group-hover:scale-110"
+                >
+                  <img src="../images/heart.png" alt="" />
+                </span>
+                <div>
+                  <h3 class="text-sm font-semibold text-navy dark:text-white">Customer First</h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
+                    We design our services around your needs and convenience.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-white hover:shadow-sm dark:hover:bg-slate-900"
+              >
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white transition duration-300 group-hover:scale-110"
+                >
+                  <img src="../images/star.png" alt="" />
+                </span>
+                <div>
+                  <h3 class="text-sm font-semibold text-navy dark:text-white">
+                    Quality &amp; Care
+                  </h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
+                    We ensure vehicle quality and a positive rental experience.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer">
+      <footer class="bg-[#667085] text-white dark:bg-slate-900">
+        <div class="mx-auto max-w-[1440px] px-5 pt-12 pb-6 sm:px-8">
+          <!-- Top section -->
+          <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 footer-columns">
+            <!-- Brand -->
+            <div>
+              <a href="../index.html" aria-label="DriveEase home">
+                <img
+                  src="../images/logo.png"
+                  alt="DriveEase logo"
+                  class="h-16 w-auto dark:hidden"
+                />
+                <img
+                  src="../images/dark-logo.png"
+                  alt="DriveEase logo"
+                  class="hidden h-12 w-auto dark:block"
+                />
+              </a>
+              <p class="mt-3 text-base text-slate-200">Find the right car for every journey.</p>
+            </div>
+            <!-- Explore -->
+            <nav aria-label="Explore">
+              <h3 class="text-lg font-semibold">Explore</h3>
+              <ul class="mt-5 space-y-4">
+                <li>
+                  <a
+                    href="../index.html"
+                    class="text-accent transition hover:text-teal-300 hover:underline"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/browse-cars.html"
+                    class="text-accent transition hover:text-teal-300 hover:underline"
+                  >
+                    Browse Cars
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/about.html"
+                    class="text-accent transition hover:text-teal-300 hover:underline"
+                  >
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Help -->
+            <nav aria-label="Help">
+              <h3 class="text-lg font-semibold">Help</h3>
+              <ul class="mt-5 space-y-4">
+                <li>
+                  <a
+                    href="../pages/contact.html#faq-title"
+                    class="text-teal-500 transition hover:text-teal-300 hover:underline"
+                  >
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/contact.html"
+                    class="text-teal-500 transition hover:text-teal-300 hover:underline"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="text-teal-500 transition hover:text-teal-300 hover:underline"
+                    data-open-info="guide"
+                    aria-haspopup="dialog"
+                    aria-controls="rental-info-dialog"
+                  >
+                    Rental Guide
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <!-- Sponsor -->
+            <div class="lg:text-center">
+              <h3 class="text-lg font-semibold uppercase">Sponsor by</h3>
+              <a
+                href="https://istad.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block"
+                aria-label="ISTAD"
+              >
+                <img
+                  src="../images/istad-logo.png"
+                  alt="ISTAD logo"
+                  class="h-24 w-24 rounded-full"
+                />
+              </a>
+            </div>
+          </div>
+          <hr class="mt-12 border-white/20" />
+          <!-- Bottom bar -->
+          <div
+            class="mt-6 flex flex-col items-center justify-between gap-4 text-sm text-slate-200 sm:flex-row"
+          >
+            <p>
+              ©
+              <span data-year="">2026</span>
+              DriveEase. All rights reserved.
+            </p>
+            <div class="flex items-center">
+              <button
+                type="button"
+                class="pr-4 hover:text-white hover:underline"
+                data-open-info="privacy"
+                aria-haspopup="dialog"
+                aria-controls="rental-info-dialog"
+              >
+                Privacy Policy
+              </button>
+              <span class="h-6 w-px bg-white/30" aria-hidden="true"></span>
+              <button
+                type="button"
+                class="pl-4 hover:text-white hover:underline"
+                data-open-info="terms"
+                aria-haspopup="dialog"
+                aria-controls="rental-info-dialog"
+              >
+                Terms of Service
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <dialog id="rental-info-dialog" aria-labelledby="rental-info-title">
+      <header class="flex items-center justify-between gap-4">
+        <h2 id="rental-info-title" class="text-2xl font-bold">Rental Guide</h2>
+        <button
+          type="button"
+          data-close-dialog=""
+          aria-label="Close rental information"
+          class="info-close"
+        >
+          <svg class="h-5 w-5" aria-hidden="true">
+            <use href="../images/icons.svg#icon-19"></use>
+          </svg>
+        </button>
+      </header>
+      <section data-info-panel="guide" class="mt-6 space-y-5">
+        <div>
+          <h3 class="font-semibold text-accent">1. Choose your car</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Browse the cars, compare daily rates, and open View details to check the vehicle.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-accent">2. Enter your rental details</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Click Rent Now. Choose your pickup city, dates and times, then enter your contact
+            information.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-accent">3. Review and confirm</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Review the total, accept the rental terms, and confirm your demo booking. You can
+            download a trip summary.
+          </p>
+        </div>
+        <p
+          class="border-t border-slate-200 pt-4 text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400"
+        >
+          Bring your driving licence and identification for a real rental. This classroom demo does
+          not reserve vehicles or take payments.
+        </p>
+      </section>
+      <section
+        data-info-panel="terms"
+        hidden=""
+        class="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-300"
+      >
+        <p>
+          DriveEase is a student frontend project. Vehicles, daily rates, pickup cities and
+          availability are illustrative.
+        </p>
+        <p>
+          The demo total is the daily rate multiplied by rental days. Each started 24-hour period
+          counts as one day. No taxes, insurance charges or deposits are added.
+        </p>
+        <p>
+          Pickup must be today or later, and return must be after pickup. For a real rental, confirm
+          eligibility, insurance, deposits, fuel policy and cancellation conditions with the
+          provider.
+        </p>
+        <p>
+          Confirming here creates a demo summary. It does not reserve a vehicle or charge a payment.
+        </p>
+      </section>
+      <section
+        data-info-panel="privacy"
+        hidden=""
+        class="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-300"
+      >
+        <p>
+          Booking and contact entries stay in the current page. They are not submitted to a server
+          or saved in browser storage.
+        </p>
+        <p>
+          The downloaded trip summary contains only the trip, price and reference. Your theme
+          preference is saved in localStorage.
+        </p>
+        <p>
+          Vehicle photos are served locally. The Google map on the Contact page may use Google's
+          cookies and network services.
+        </p>
+      </section>
+    </dialog>
+    <script type="module" src="../dist/main.js"></script>
+  </body>
+</html>

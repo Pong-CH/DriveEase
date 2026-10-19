@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="../dist/theme.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book your car | DriveEase Cambodia</title>
+
+    <link rel="stylesheet" href="../src/output.css" />
+    <meta name="theme-color" content="#142B4A" />
+
+    <meta
+      name="description"
+      content="Choose your rental dates, review your live price summary, and create a demo guest booking."
+    />
+    <meta property="og:title" content="Book your car | DriveEase Cambodia" />
+    <meta
+      property="og:description"
+      content="Choose your rental dates, review your live price summary, and create a demo guest booking."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="./booking.html" />
+    <meta property="og:image" content="../images/banner.webp" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+  </head>
+  <body class="bg-page antialiased dark:bg-slate-950">
+    <noscript>
+      Please enable JavaScript to view the car catalogue and use booking or contact forms.
+    </noscript>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="navbar" class="sticky top-0 z-50">
+      <header
+        class="border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95"
+      >
+        <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-5 px-5">
+          <a data-nav="home" href="../index.html" aria-label="DriveEase home">
+            <img
+              src="../images/logo.png"
+              class="brand-logo dark:hidden"
+              alt="DriveEase"
+              width="142"
+              height="56"
+            />
+            <img
+              src="../images/dark-logo.png"
+              class="brand-logo hidden dark:block"
+              alt="DriveEase"
+              width="142"
+              height="56"
+            />
+          </a>
+          <nav
+            aria-label="Main navigation"
+            class="hidden items-center gap-8 text-sm font-medium md:flex"
+          >
+            <a data-nav="home" href="../index.html">Home</a>
+            <a data-nav="cars" href="../pages/browse-cars.html">Browse cars</a>
+            <a data-nav="about" href="../pages/about.html">About us</a>
+            <a data-nav="contact" href="../pages/contact.html">Contact</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <button
+              id="theme-toggle"
+              type="button"
+              class="rounded-full border border-slate-200 p-2.5 dark:border-slate-700"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+            >
+              <svg class="h-5 w-5 dark:hidden" aria-hidden="true">
+                <use href="../images/icons.svg#icon-1"></use></svg
+              ><svg class="hidden h-5 w-5 dark:block" aria-hidden="true">
+                <use href="../images/icons.svg#icon-2"></use>
+              </svg>
+            </button>
+            <a href="../pages/browse-cars.html" class="btn-primary hidden text-sm lg:inline-flex">
+              Find your car
+              <span aria-hidden="true">↗</span>
+            </a>
+            <button
+              id="menu-toggle"
+              class="rounded-lg border border-slate-200 p-2.5 md:hidden dark:border-slate-700"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg width="22" height="22" aria-hidden="true">
+                <use href="../images/icons.svg#icon-3"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile navigation"
+          class="hidden border-t border-slate-200 px-5 py-5 md:hidden dark:border-slate-700"
+        >
+          <ul class="space-y-4">
+            <li><a data-nav="home" href="../index.html">Home</a></li>
+            <li><a data-nav="cars" href="../pages/browse-cars.html">Browse cars</a></li>
+            <li><a data-nav="about" href="../pages/about.html">About us</a></li>
+            <li><a data-nav="contact" href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <main class="bg-page dark:bg-slate-950" id="main-content">
+      <!-- Hero -->
+      <section class="relative overflow-hidden">
+        <img
+          src="../images/rent-banner-crop.webp"
+          alt=""
+          aria-hidden="true"
+          class="absolute inset-0 h-full w-full object-cover object-right dark:brightness-75"
+        />
+        <div
+          class="absolute inset-0 bg-linear-to-r from-white/80 via-white/20 to-transparent dark:from-slate-950/90 dark:via-slate-950/50 dark:to-slate-950/10"
+        ></div>
+        <div
+          class="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-page to-transparent dark:from-slate-950"
+        ></div>
+
+        <div class="relative mx-auto max-w-[1440px] px-5 py-10 md:py-12">
+          <nav aria-label="Breadcrumb">
+            <ol
+              class="flex flex-wrap items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="transition-colors hover:text-deep-green hover:underline dark:hover:text-teal-300"
+                >
+                  Home
+                </a>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>
+                <a
+                  href="./browse-cars.html"
+                  class="transition-colors hover:text-deep-green hover:underline dark:hover:text-teal-300"
+                >
+                  Browse Cars
+                </a>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page" class="font-medium text-navy dark:text-white">Booking</li>
+            </ol>
+          </nav>
+          <h1
+            class="mt-5 font-display text-4xl font-extrabold tracking-tight text-navy sm:text-5xl dark:text-white"
+          >
+            Book your next journey
+          </h1>
+          <p class="mt-3 max-w-lg text-lg text-slate-700 dark:text-slate-200">
+            Review your car, enter your details, and confirm your demo booking.
+          </p>
+          <a
+            href="./browse-cars.html"
+            class="group/back mt-5 inline-flex items-center gap-2 text-sm font-semibold text-deep-green dark:text-teal-300"
+          >
+            <svg
+              class="h-4 w-4 transition-transform group-hover/back:-translate-x-1"
+              aria-hidden="true"
+            >
+              <use href="../images/icons.svg#icon-20"></use>
+            </svg>
+            <span class="group-hover/back:underline">Back to cars</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Booking form -->
+      <form
+        id="booking-form"
+        data-daily-rate="42"
+        novalidate=""
+        class="mx-auto max-w-[1440px] px-5 pt-4 pb-16"
+      >
+        <!-- Step 1: selected car -->
+        <section
+          aria-labelledby="step1-title"
+          class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+        >
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <span
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white"
+                aria-hidden="true"
+              >
+                1
+              </span>
+              <h2 id="step1-title" class="font-display text-xl font-bold text-navy dark:text-white">
+                Your selected car
+              </h2>
+            </div>
+            <a
+              href="./browse-cars.html"
+              class="group/edit flex items-center gap-2 text-sm font-semibold text-deep-green dark:text-teal-300"
+            >
+              <svg
+                class="h-4 w-4 transition-transform group-hover/edit:scale-110"
+                aria-hidden="true"
+              >
+                <use href="../images/icons.svg#icon-21"></use>
+              </svg>
+              <span class="group-hover/edit:underline">Change car</span>
+            </a>
+          </div>
+
+          <div class="mt-5 grid items-center gap-6 md:grid-cols-[1.1fr_1fr] md:gap-10">
+            <div class="overflow-hidden rounded-xl">
+              <img
+                src="../images/cars/ranger.jpg"
+                alt="Selected rental car"
+                data-car-image=""
+                class="h-56 w-full object-cover md:h-72"
+              />
+            </div>
+
+            <div>
+              <h3
+                class="font-display text-2xl font-bold text-navy dark:text-white"
+                data-car-name=""
+              >
+                Ford Ranger
+              </h3>
+              <span
+                class="mt-2 inline-block rounded-full bg-teal-100 px-3 py-1 text-sm font-medium text-teal-800 dark:bg-teal-900/80 dark:text-teal-200"
+                data-car-type=""
+              >
+                Pickup
+              </span>
+              <p class="mt-3 text-slate-600 dark:text-slate-300" id="booking-description">
+                A versatile pickup with a comfortable cabin and useful cargo space for city trips
+                and countryside adventures.
+              </p>
+
+              <ul
+                class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-600 dark:text-slate-300"
+              >
+                <li id="booking-specs"></li>
+              </ul>
+
+              <p class="mt-5">
+                <span class="font-display text-4xl font-extrabold text-accent" id="booking-price">
+                  $65
+                </span>
+                <span class="text-lg text-slate-500 dark:text-slate-400">/ day</span>
+              </p>
+              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+                Sample rate for this demo.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-5 grid items-start gap-5 booking-columns">
+          <!-- Step 2: rental and customer details -->
+          <section
+            aria-labelledby="step2-title"
+            class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white"
+                aria-hidden="true"
+              >
+                2
+              </span>
+              <h2 id="step2-title" class="font-display text-xl font-bold text-navy dark:text-white">
+                Rental &amp; customer details
+              </h2>
+            </div>
+
+            <fieldset class="mt-5">
+              <legend class="text-base font-semibold text-navy dark:text-white">Your trip</legend>
+              <div class="mt-3 grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="pickup-location"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Pickup location
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-22"></use>
+                    </svg>
+                    <select
+                      id="pickup-location"
+                      name="pickupLocation"
+                      required=""
+                      class="w-full cursor-pointer appearance-none rounded-lg border border-slate-300 bg-white py-2.5 pr-9 pl-10 text-navy transition hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:hover:border-teal-400 select-options"
+                    >
+                      <option>Phnom Penh</option>
+                      <option>Siem Reap</option>
+                      <option>Sihanoukville</option>
+                      <option>Kampot</option>
+                    </select>
+                    <svg
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-23"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="return-location"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Return location
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-22"></use>
+                    </svg>
+                    <select
+                      id="return-location"
+                      name="returnLocation"
+                      required=""
+                      class="w-full cursor-pointer appearance-none rounded-lg border border-slate-300 bg-white py-2.5 pr-9 pl-10 text-navy transition hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:hover:border-teal-400 select-options"
+                    >
+                      <option>Phnom Penh</option>
+                      <option>Siem Reap</option>
+                      <option>Sihanoukville</option>
+                      <option>Kampot</option>
+                    </select>
+                    <svg
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-23"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="pickup-date"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Pickup date
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-24"></use>
+                    </svg>
+                    <input
+                      id="pickup-date"
+                      name="pickupDate"
+                      type="date"
+                      value="2026-10-22"
+                      required=""
+                      class="w-full cursor-pointer rounded-lg border border-slate-300 bg-white py-2.5 pr-3 pl-10 text-navy transition hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:scheme-dark dark:hover:border-teal-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="return-date"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Return date
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-24"></use>
+                    </svg>
+                    <input
+                      id="return-date"
+                      name="returnDate"
+                      type="date"
+                      value="2026-10-25"
+                      required=""
+                      class="w-full cursor-pointer rounded-lg border border-slate-300 bg-white py-2.5 pr-3 pl-10 text-navy transition hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:scheme-dark dark:hover:border-teal-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="pickup-time"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Pickup time
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-25"></use>
+                    </svg>
+                    <select
+                      id="pickup-time"
+                      name="pickupTime"
+                      required=""
+                      class="w-full cursor-pointer appearance-none rounded-lg border border-slate-300 bg-white py-2.5 pr-9 pl-10 text-navy transition hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:hover:border-teal-400 select-options"
+                    ></select>
+                    <svg
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-23"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="return-time"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Return time
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-25"></use>
+                    </svg>
+                    <select
+                      id="return-time"
+                      name="returnTime"
+                      required=""
+                      class="w-full cursor-pointer appearance-none rounded-lg border border-slate-300 bg-white py-2.5 pr-9 pl-10 text-navy transition hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:hover:border-teal-400 select-options"
+                    ></select>
+                    <svg
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-23"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <hr class="my-6 border-slate-200 dark:border-slate-700" />
+
+            <fieldset>
+              <legend class="text-base font-semibold text-navy dark:text-white">
+                Your contact details
+              </legend>
+              <div class="mt-3 grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="full-name"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Full name
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-26"></use>
+                    </svg>
+                    <input
+                      id="full-name"
+                      name="fullName"
+                      type="text"
+                      required=""
+                      autocomplete="name"
+                      placeholder="Enter your full name"
+                      class="w-full rounded-lg border border-slate-300 bg-white py-2.5 pr-3 pl-10 text-navy transition placeholder:text-slate-400 hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:hover:border-teal-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="email"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Email address
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-27"></use>
+                    </svg>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required=""
+                      autocomplete="email"
+                      placeholder="you@example.com"
+                      class="w-full rounded-lg border border-slate-300 bg-white py-2.5 pr-3 pl-10 text-navy transition placeholder:text-slate-400 hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:hover:border-teal-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="phone"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Phone number
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-28"></use>
+                    </svg>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required=""
+                      autocomplete="tel"
+                      placeholder="+855"
+                      class="w-full rounded-lg border border-slate-300 bg-white py-2.5 pr-3 pl-10 text-navy transition placeholder:text-slate-400 hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:hover:border-teal-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="passengers"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Passengers
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-29"></use>
+                    </svg>
+                    <select
+                      id="passengers"
+                      name="passengers"
+                      required=""
+                      class="w-full cursor-pointer appearance-none rounded-lg border border-slate-300 bg-white py-2.5 pr-9 pl-10 text-navy transition invalid:text-slate-400 hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:invalid:text-slate-500 dark:hover:border-teal-400 select-options"
+                    >
+                      <option value="" disabled="" selected="">Select passengers</option>
+                      <option>1 passenger</option>
+                      <option>2 passengers</option>
+                      <option>3 passengers</option>
+                      <option>4 passengers</option>
+                      <option>5 passengers</option>
+                    </select>
+                    <svg
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-23"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label
+                    for="requests"
+                    class="mb-1.5 block text-sm font-medium text-navy dark:text-slate-200"
+                  >
+                    Special requests (optional)
+                  </label>
+                  <div class="relative">
+                    <svg
+                      class="pointer-events-none absolute top-3.5 left-3 h-4 w-4 text-accent"
+                      aria-hidden="true"
+                    >
+                      <use href="../images/icons.svg#icon-30"></use>
+                    </svg>
+                    <textarea
+                      id="requests"
+                      name="requests"
+                      rows="3"
+                      placeholder="Tell us anything that could help with your trip"
+                      class="w-full resize-none rounded-lg border border-slate-300 bg-white py-2.5 pr-3 pl-10 text-navy transition placeholder:text-slate-400 hover:border-accent focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:hover:border-teal-400"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div
+              class="mt-6 flex items-center gap-3 rounded-xl border border-teal-100 bg-[#E8F6F3] px-4 py-3 dark:border-teal-900/60 dark:bg-teal-950/40"
+            >
+              <svg class="h-8 w-8 shrink-0 text-accent" aria-hidden="true">
+                <use href="../images/icons.svg#icon-31"></use>
+              </svg>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                <strong class="block text-navy dark:text-white">
+                  Guest booking — no account needed.
+                </strong>
+                You can make a demo booking without creating an account.
+              </p>
+            </div>
+          </section>
+
+          <!-- Step 3: summary + help -->
+          <div class="space-y-5 lg:sticky lg:top-20">
+            <aside
+              aria-labelledby="step3-title"
+              class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white"
+                  aria-hidden="true"
+                >
+                  3
+                </span>
+                <h2
+                  id="step3-title"
+                  class="font-display text-xl font-bold text-navy dark:text-white"
+                >
+                  Booking summary
+                </h2>
+              </div>
+
+              <div class="mt-4 flex items-center gap-3">
+                <img
+                  src="../images/cars/ranger.jpg"
+                  alt="Selected rental car"
+                  data-car-image=""
+                  class="h-14 w-20 shrink-0 rounded-md object-cover"
+                />
+                <div class="min-w-0">
+                  <p class="break-words font-semibold text-navy dark:text-white" data-car-name="">
+                    Ford Ranger
+                  </p>
+                  <span
+                    class="mt-1 inline-block rounded-full bg-teal-100 px-2.5 py-0.5 text-sm font-medium text-teal-800 dark:bg-teal-900/80 dark:text-teal-200"
+                    data-car-type=""
+                  >
+                    Pickup
+                  </span>
+                </div>
+              </div>
+
+              <dl class="mt-4 divide-y divide-slate-200 text-sm dark:divide-slate-700">
+                <div class="flex justify-between gap-4 py-2.5">
+                  <dt class="text-slate-500 dark:text-slate-400">Pickup</dt>
+                  <dd id="sum-pickup" class="text-right text-slate-700 dark:text-slate-200">—</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-2.5">
+                  <dt class="text-slate-500 dark:text-slate-400">Return</dt>
+                  <dd id="sum-return" class="text-right text-slate-700 dark:text-slate-200">—</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-2.5">
+                  <dt class="text-slate-500 dark:text-slate-400">Duration</dt>
+                  <dd id="sum-duration" class="text-right text-slate-700 dark:text-slate-200">—</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-2.5">
+                  <dt class="text-slate-500 dark:text-slate-400">Daily rate</dt>
+                  <dd id="sum-rate" class="text-right text-slate-700 dark:text-slate-200">—</dd>
+                </div>
+              </dl>
+
+              <div class="mt-4 flex justify-between text-sm text-navy dark:text-slate-100">
+                <span id="sum-rental-label">Rental</span>
+                <span id="sum-rental-amount">—</span>
+              </div>
+
+              <div
+                class="mt-3 flex items-center justify-between rounded-xl border border-teal-100 bg-[#E8F6F3] px-4 py-4 dark:border-teal-900/60 dark:bg-teal-950/40"
+              >
+                <span class="font-semibold text-navy dark:text-white">Total</span>
+                <span id="sum-total" class="font-display text-2xl font-extrabold text-accent">
+                  —
+                </span>
+              </div>
+
+              <label
+                class="mt-4 flex cursor-pointer items-center gap-2 text-sm text-slate-600 dark:text-slate-300"
+              >
+                <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  required=""
+                  class="h-4 w-4 cursor-pointer rounded accent-accent"
+                />
+                <span>
+                  I agree to the
+                  <button
+                    type="button"
+                    class="font-medium text-deep-green underline underline-offset-4 transition-colors hover:text-accent dark:text-teal-300"
+                    data-open-info="terms"
+                    aria-haspopup="dialog"
+                    aria-controls="rental-info-dialog"
+                  >
+                    rental terms
+                  </button>
+                  .
+                </span>
+              </label>
+
+              <button
+                type="submit"
+                class="group/btn mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-4 py-3.5 font-semibold text-white shadow-md shadow-accent/30 transition hover:-translate-y-0.5 hover:bg-primary hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              >
+                Confirm Demo Booking
+                <svg
+                  class="h-4 w-4 transition-transform group-hover/btn:translate-x-1"
+                  aria-hidden="true"
+                >
+                  <use href="../images/icons.svg#icon-32"></use>
+                </svg>
+              </button>
+              <p
+                id="booking-status"
+                role="status"
+                aria-live="polite"
+                class="mt-3 text-center text-sm font-medium"
+              ></p>
+              <p class="mt-2 text-center text-sm text-slate-500 dark:text-slate-400">
+                This demo does not reserve a vehicle or take payment.
+              </p>
+            </aside>
+
+            <aside
+              aria-labelledby="help-title"
+              class="group flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-teal-500/50"
+            >
+              <span
+                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition duration-300 group-hover:bg-accent group-hover:text-white dark:bg-teal-900 dark:text-teal-200 dark:group-hover:bg-teal-500 dark:group-hover:text-teal-950"
+              >
+                <svg class="h-6 w-6" aria-hidden="true">
+                  <use href="../images/icons.svg#icon-33"></use>
+                </svg>
+              </span>
+              <div>
+                <h2 id="help-title" class="font-semibold text-navy dark:text-white">Need help?</h2>
+                <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                  If you have any questions, we're here to help.
+                </p>
+                <a
+                  href="./contact.html"
+                  class="group/link mt-2 inline-flex items-center gap-2 text-sm font-semibold text-deep-green dark:text-teal-300"
+                >
+                  <span class="group-hover/link:underline">Contact us</span>
+                  <svg
+                    class="h-4 w-4 transition-transform group-hover/link:translate-x-1"
+                    aria-hidden="true"
+                  >
+                    <use href="../images/icons.svg#icon-32"></use>
+                  </svg>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm text-slate-500 dark:text-slate-400">
+          Please check your dates and contact details before confirming.
+        </p>
+      </form>
+    </main>
+
+    <div id="footer">
+      <footer class="bg-[#667085] text-white dark:bg-slate-900">
+        <div class="mx-auto max-w-[1440px] px-5 pt-12 pb-6 sm:px-8">
+          <!-- Top section -->
+          <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 footer-columns">
+            <!-- Brand -->
+            <div>
+              <a href="../index.html" aria-label="DriveEase home">
+                <img
+                  src="../images/logo.png"
+                  alt="DriveEase logo"
+                  class="h-16 w-auto dark:hidden"
+                />
+                <img
+                  src="../images/dark-logo.png"
+                  alt="DriveEase logo"
+                  class="hidden h-12 w-auto dark:block"
+                />
+              </a>
+              <p class="mt-3 text-base text-slate-200">Find the right car for every journey.</p>
+            </div>
+            <!-- Explore -->
+            <nav aria-label="Explore">
+              <h3 class="text-lg font-semibold">Explore</h3>
+              <ul class="mt-5 space-y-4">
+                <li>
+                  <a
+                    href="../index.html"
+                    class="text-accent transition hover:text-teal-300 hover:underline"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/browse-cars.html"
+                    class="text-accent transition hover:text-teal-300 hover:underline"
+                  >
+                    Browse Cars
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/about.html"
+                    class="text-accent transition hover:text-teal-300 hover:underline"
+                  >
+                    About Us
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Help -->
+            <nav aria-label="Help">
+              <h3 class="text-lg font-semibold">Help</h3>
+              <ul class="mt-5 space-y-4">
+                <li>
+                  <a
+                    href="../pages/contact.html#faq-title"
+                    class="text-teal-500 transition hover:text-teal-300 hover:underline"
+                  >
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/contact.html"
+                    class="text-teal-500 transition hover:text-teal-300 hover:underline"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="text-teal-500 transition hover:text-teal-300 hover:underline"
+                    data-open-info="guide"
+                    aria-haspopup="dialog"
+                    aria-controls="rental-info-dialog"
+                  >
+                    Rental Guide
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <!-- Sponsor -->
+            <div class="lg:text-center">
+              <h3 class="text-lg font-semibold uppercase">Sponsor by</h3>
+              <a
+                href="https://istad.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block"
+                aria-label="ISTAD"
+              >
+                <img
+                  src="../images/istad-logo.png"
+                  alt="ISTAD logo"
+                  class="h-24 w-24 rounded-full"
+                />
+              </a>
+            </div>
+          </div>
+          <hr class="mt-12 border-white/20" />
+          <!-- Bottom bar -->
+          <div
+            class="mt-6 flex flex-col items-center justify-between gap-4 text-sm text-slate-200 sm:flex-row"
+          >
+            <p>
+              ©
+              <span data-year="">2026</span>
+              DriveEase. All rights reserved.
+            </p>
+            <div class="flex items-center">
+              <button
+                type="button"
+                class="pr-4 hover:text-white hover:underline"
+                data-open-info="privacy"
+                aria-haspopup="dialog"
+                aria-controls="rental-info-dialog"
+              >
+                Privacy Policy
+              </button>
+              <span class="h-6 w-px bg-white/30" aria-hidden="true"></span>
+              <button
+                type="button"
+                class="pl-4 hover:text-white hover:underline"
+                data-open-info="terms"
+                aria-haspopup="dialog"
+                aria-controls="rental-info-dialog"
+              >
+                Terms of Service
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <dialog id="booking-dialog" aria-labelledby="confirmation-title">
+      <button
+        type="button"
+        data-close-dialog=""
+        class="float-right rounded-lg px-3 py-1"
+        aria-label="Close confirmation"
+      >
+        ✕
+      </button>
+      <p class="eyebrow">Ready for the next adventure</p>
+      <h2 id="confirmation-title" class="mt-3 text-3xl font-bold">Demo booking complete.</h2>
+      <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">
+        Your trip summary is ready. This classroom demo does not reserve a vehicle, send your
+        details, or collect payment.
+      </p>
+      <dl class="mt-6 space-y-3 rounded-xl bg-slate-100 p-5 dark:bg-slate-800">
+        <div>
+          <dt class="text-xs uppercase tracking-wider">Reference</dt>
+          <dd id="confirmation-reference" class="font-bold"></dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider">Your car</dt>
+          <dd id="confirmation-car" class="font-bold"></dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider">Trip</dt>
+          <dd id="confirmation-trip"></dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider">Total</dt>
+          <dd id="confirmation-total" class="text-3xl font-bold text-teal-600"></dd>
+        </div>
+      </dl>
+      <button type="button" id="download-booking" class="btn-primary mt-6 w-full">
+        Download trip summary
+      </button>
+      <button type="button" data-close-dialog="" class="mt-3 w-full py-2 text-sm font-semibold">
+        Keep exploring
+      </button>
+    </dialog>
+
+    <dialog id="rental-info-dialog" aria-labelledby="rental-info-title">
+      <header class="flex items-center justify-between gap-4">
+        <h2 id="rental-info-title" class="text-2xl font-bold">Rental Guide</h2>
+        <button
+          type="button"
+          data-close-dialog=""
+          aria-label="Close rental information"
+          class="info-close"
+        >
+          <svg class="h-5 w-5" aria-hidden="true">
+            <use href="../images/icons.svg#icon-19"></use>
+          </svg>
+        </button>
+      </header>
+      <section data-info-panel="guide" class="mt-6 space-y-5">
+        <div>
+          <h3 class="font-semibold text-accent">1. Choose your car</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Browse the cars, compare daily rates, and open View details to check the vehicle.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-accent">2. Enter your rental details</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Click Rent Now. Choose your pickup city, dates and times, then enter your contact
+            information.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-accent">3. Review and confirm</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Review the total, accept the rental terms, and confirm your demo booking. You can
+            download a trip summary.
+          </p>
+        </div>
+        <p
+          class="border-t border-slate-200 pt-4 text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400"
+        >
+          Bring your driving licence and identification for a real rental. This classroom demo does
+          not reserve vehicles or take payments.
+        </p>
+      </section>
+      <section
+        data-info-panel="terms"
+        hidden=""
+        class="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-300"
+      >
+        <p>
+          DriveEase is a student frontend project. Vehicles, daily rates, pickup cities and
+          availability are illustrative.
+        </p>
+        <p>
+          The demo total is the daily rate multiplied by rental days. Each started 24-hour period
+          counts as one day. No taxes, insurance charges or deposits are added.
+        </p>
+        <p>
+          Pickup must be today or later, and return must be after pickup. For a real rental, confirm
+          eligibility, insurance, deposits, fuel policy and cancellation conditions with the
+          provider.
+        </p>
+        <p>
+          Confirming here creates a demo summary. It does not reserve a vehicle or charge a payment.
+        </p>
+      </section>
+      <section
+        data-info-panel="privacy"
+        hidden=""
+        class="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-300"
+      >
+        <p>
+          Booking and contact entries stay in the current page. They are not submitted to a server
+          or saved in browser storage.
+        </p>
+        <p>
+          The downloaded trip summary contains only the trip, price and reference. Your theme
+          preference is saved in localStorage.
+        </p>
+        <p>
+          Vehicle photos are served locally. The Google map on the Contact page may use Google's
+          cookies and network services.
+        </p>
+      </section>
+    </dialog>
+    <script type="module" src="../dist/main.js"></script>
+  </body>
+</html>

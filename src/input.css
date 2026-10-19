@@ -1,0 +1,321 @@
+@import "tailwindcss";
+@source "../pages/**/*.html";
+@source "../index.html";
+@source "./**/*.ts";
+@import "../node_modules/preline/variants.css";
+@import "./common.css";
+@source "../node_modules/preline/dist/carousel.js";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Preline destination carousel: keep the original cards and spacing. */
+@layer components {
+  .inspiration-carousel {
+    margin-inline: -0.625rem;
+  }
+  .inspiration-carousel-viewport {
+    overflow: hidden;
+  }
+  .inspiration-carousel .hs-carousel-body {
+    display: flex;
+    align-items: stretch;
+    transition: transform 0.7s ease;
+  }
+  .inspiration-carousel .hs-carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 0.25rem 0.625rem;
+  }
+  .inspiration-carousel .panel {
+    height: 100%;
+  }
+  .inspiration-carousel-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid #128477;
+    border-radius: 9999px;
+    background: white;
+    color: #128477;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .inspiration-carousel-arrow:hover {
+    background: #128477;
+    color: white;
+  }
+  .dark .inspiration-carousel-arrow {
+    border-color: #5eead4;
+    background: #0f172a;
+    color: #5eead4;
+  }
+  .dark .inspiration-carousel-arrow:hover {
+    background: #128477;
+    color: white;
+  }
+  @media (min-width: 768px) {
+    .inspiration-carousel .hs-carousel-slide {
+      width: 50%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .inspiration-carousel .hs-carousel-slide {
+      width: 33.333333%;
+    }
+  }
+}
+@theme {
+  --color-primary: #128477;
+  --color-accent: #18a999;
+  --color-navy: #142b4a;
+  --color-deep-green: #0b7a55;
+  --color-page: #f7f8fa;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    color: #142b4a;
+    line-height: 1.6;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  html.dark body {
+    color: #e2e8f0;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+  :focus-visible {
+    outline: 3px solid #18a999;
+    outline-offset: 4px;
+  }
+  img {
+    max-width: 100%;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  ::selection {
+    background: #b4eee1;
+    color: #142b4a;
+  }
+}
+@layer components {
+  .skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    background: #142b4a;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+  [aria-current="page"] {
+    color: #128477;
+    font-weight: 700;
+  }
+  .dark [aria-current="page"] {
+    color: #5eead4;
+  }
+  .car-photo img[src*="webp"] {
+    object-fit: contain;
+    padding: 1rem;
+  }
+  .eyebrow {
+    color: #0b7a55;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .dark .eyebrow {
+    color: #5eead4;
+  }
+  .panel {
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    background: white;
+    padding: 1.5rem;
+  }
+  .dark .panel {
+    border-color: #1e293b;
+    background: #0f172a;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #128477;
+    color: white;
+    border-radius: 0.65rem;
+    padding: 0.8rem 1.4rem;
+    font-weight: 650;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover {
+    background: #0b7a55;
+  }
+  dialog {
+    max-height: 90dvh;
+    overflow: auto;
+    width: min(560px, calc(100% - 2rem));
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: white;
+    color: #142b4a;
+    padding: 2rem;
+    margin: auto;
+    box-shadow: 0 24px 80px #0004;
+  }
+  .dark dialog {
+    background: #0f172a;
+    color: #f1f5f9;
+    border-color: #334155;
+  }
+  dialog::backdrop {
+    background: #071a31b8;
+    backdrop-filter: blur(5px);
+  }
+  summary {
+    list-style: none;
+  }
+  details[open] summary {
+    margin-bottom: 0.8rem;
+  }
+  .detail-photo {
+    background: radial-gradient(ellipse at center, #fff, #e8f3ef);
+  }
+  .dark .detail-photo {
+    background: radial-gradient(ellipse at center, #263e45, #101f32);
+  }
+  .brand-logo {
+    width: 142px;
+    height: 56px;
+    object-fit: contain;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+@media print {
+  #navbar,
+  #footer,
+  button,
+  dialog::backdrop {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+@layer components {
+  dialog.car-detail-dialog {
+    width: min(1120px, calc(100% - 2rem));
+    max-height: 92dvh;
+    padding: 0;
+    border-radius: 1rem;
+    overscroll-behavior: contain;
+  }
+  .car-detail-dialog > .detail-panel {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .detail-panel .detail-gallery-image {
+    position: sticky;
+    top: 1rem;
+  }
+  .car-detail-dialog .detail-panel > header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: white;
+  }
+  .dark .car-detail-dialog .detail-panel > header {
+    background: #0f172a;
+  }
+  @media (max-width: 639px) {
+    dialog.car-detail-dialog {
+      width: calc(100% - 1rem);
+      max-height: 94dvh;
+    }
+    .detail-panel > header,
+    .detail-panel > div,
+    .detail-panel > footer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .detail-panel li {
+      gap: 0.5rem;
+      padding: 0.75rem;
+      font-size: 0.875rem;
+    }
+    .detail-panel > footer {
+      gap: 0.75rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    .detail-panel > footer > div:last-child {
+      width: 100%;
+    }
+    .detail-panel > footer > div:last-child > * {
+      flex: 1;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    .detail-panel > footer [data-detail-price] {
+      font-size: 2rem;
+    }
+  }
+}
+
+/* Car detail image: remove background and padding */
+.detail-panel .detail-gallery-image {
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Fill the existing image container */
+.detail-panel .detail-gallery-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  padding: 0;
+  object-fit: cover;
+}
