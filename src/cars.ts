@@ -1,4 +1,3 @@
-/** Shared static catalogue. Rates and specifications describe this classroom demo fleet. */
 export interface Car {
   id: number;
   name: string;
@@ -150,7 +149,6 @@ export const cars: Car[] = [
   },
 ];
 export const locations = ["Phnom Penh", "Siem Reap", "Sihanoukville", "Kampot"];
-// Each module lives in dist/, so this resolves correctly at / and /repository/ alike.
 export const base = new URL("../", import.meta.url);
 export const asset = (path: string): string => new URL(path, base).href;
 export const money = (amount: number): string => `$${amount.toFixed(2)}`;

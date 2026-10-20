@@ -1,6 +1,3 @@
-/* Reusable styles keep long, repeated class lists out of the HTML. */
-
-/* Scroll through the complete fleet with touch, trackpad, keyboard, or arrows. */
 .car-scroll {
   display: grid;
   grid-auto-flow: column;
@@ -56,7 +53,6 @@
   }
 }
 
-/* Vehicle specifications in the details popup. */
 .spec-item {
   display: flex;
   align-items: center;
@@ -82,7 +78,6 @@
   border-color: color-mix(in oklab, var(--color-teal-500) 60%, transparent);
 }
 
-/* Close buttons used by the two popups. */
 .info-close,
 .detail-close {
   display: flex;

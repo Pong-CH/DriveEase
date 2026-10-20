@@ -96,7 +96,7 @@ export function setupBooking(): void {
     validate();
     if (!form.reportValidity() || !days) return;
     const ref = `DE-${Date.now().toString(36).toUpperCase()}`;
-    confirmation = `DriveEase — DEMO BOOKING\nReference: ${ref}\nCar: ${car!.name}\nPickup: ${field("pickup-location").value}, ${start.value} ${field("pickup-time").value}\nReturn: ${field("return-location").value}, ${end.value} ${field("return-time").value}\nDuration: ${days} days\nDaily rate: ${money(car!.price)}\nTotal: ${money(total)}\n\nClassroom demonstration only. No reservation, payment, or message has been sent.`;
+    confirmation = `DriveEase — DEMO BOOKING\nReference: ${ref}\nCar: ${car!.name}\nPickup: ${field("pickup-location").value}, ${start.value} ${field("pickup-time").value}\nReturn: ${field("return-location").value}, ${end.value} ${field("return-time").value}\nDuration: ${days} days\nDaily rate: ${money(car!.price)}\nTotal: ${money(total)}`;
     set("confirmation-reference", ref);
     set("confirmation-car", car!.name);
     set("confirmation-total", money(total));

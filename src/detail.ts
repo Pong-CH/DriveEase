@@ -1,7 +1,6 @@
 import { cars, card, selectedCar, invalidCar, asset, pageLink, money } from "./cars.js";
 import type { Car } from "./cars.js";
 
-/** Fill the supplied detail layout with the vehicle the visitor selected. */
 function fillDetail(container: HTMLElement, car: Car): void {
   const text = (role: string, value: string): void => {
     container.querySelector<HTMLElement>(`[data-detail-${role}]`)!.textContent = value;
@@ -57,7 +56,6 @@ export function setupDetail(): void {
   document.title = `${car.name} rental | DriveEase Cambodia`;
   fillDetail(page, car);
   const title = page.querySelector<HTMLElement>("[data-detail-title]")!;
-  // The fallback page has one H1; the popup uses an H2.
   const heading = document.createElement("h1");
   heading.className = title.className;
   heading.textContent = title.textContent;
@@ -104,7 +102,6 @@ export function setupDetailPopup(): void {
     event.preventDefault();
     trigger = link;
     fillDetail(dialog, car);
-    // Carry any trip selections from the clicked link into booking.
     const rent = dialog.querySelector<HTMLAnchorElement>("[data-detail-rent]")!;
     const booking = new URL(rent.href);
     for (const key of ["location", "pickup", "return"]) {

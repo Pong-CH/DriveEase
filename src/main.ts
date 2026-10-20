@@ -17,7 +17,7 @@ function setupNavbar(): void {
     try {
       localStorage.setItem("theme", dark ? "dark" : "light");
     } catch {
-      /* The theme still works when storage is unavailable. */
+      
     }
     updateLabel();
   });
