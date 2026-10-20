@@ -58,6 +58,20 @@ function setupSearch(): void {
     end.value = q.get("return") || dateAfter(4);
     const selected = q.get("location");
     if (selected && locations.includes(selected)) loc.value = selected;
+    const saveTrip = (): void => {
+      try {
+        sessionStorage.setItem(
+          "driveease-trip",
+          JSON.stringify({
+            location: loc.value,
+            pickup: pickup.value,
+            return: end.value,
+          }),
+        );
+      } catch {
+        // The form still works if browser storage is unavailable.
+      }
+    };
     const validate = (): void => {
       pickup.setCustomValidity(
         !validDate(pickup.value)
@@ -78,12 +92,21 @@ function setupSearch(): void {
     pickup.addEventListener("input", () => {
       if (validDate(pickup.value) && end.value <= pickup.value) end.value = nextDate(pickup.value);
     });
-    form.addEventListener("input", validate);
+    form.addEventListener("input", () => {
+      validate();
+      saveTrip();
+    });
+    form.addEventListener("change", saveTrip);
     form.addEventListener("submit", (e) => {
       validate();
-      if (!form.reportValidity()) e.preventDefault();
+      if (!form.reportValidity()) {
+        e.preventDefault();
+        return;
+      }
+      saveTrip();
     });
     validate();
+    saveTrip();
   });
 }
 function setupContact(): void {

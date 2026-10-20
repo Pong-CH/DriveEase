@@ -1,4 +1,4 @@
-import { selectedCar, invalidCar, asset, money, dateAfter, rentalDays, locations } from "./cars.js";
+import { selectedCar, invalidCar, asset, money, dateAfter, rentalDays, locations, savedTrip } from "./cars.js";
 export function setupBooking(): void {
   const form = document.querySelector<HTMLFormElement>("#booking-form");
   if (!form) return;
@@ -37,12 +37,13 @@ export function setupBooking(): void {
     field(name).value = "09:00";
   }
   const q = new URLSearchParams(location.search),
+    saved = savedTrip(),
     start = field("pickup-date") as HTMLInputElement,
     end = field("return-date") as HTMLInputElement;
   start.min = end.min = dateAfter(0);
-  start.value = q.get("pickup") || dateAfter(1);
-  end.value = q.get("return") || dateAfter(4);
-  const loc = q.get("location");
+  start.value = q.get("pickup") || saved.get("pickup") || dateAfter(1);
+  end.value = q.get("return") || saved.get("return") || dateAfter(4);
+  const loc = q.get("location") || saved.get("location");
   if (loc && locations.includes(loc)) {
     field("pickup-location").value = loc;
     field("return-location").value = loc;

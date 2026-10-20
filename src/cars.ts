@@ -152,12 +152,32 @@ export const locations = ["Phnom Penh", "Siem Reap", "Sihanoukville", "Kampot"];
 export const base = new URL("../", import.meta.url);
 export const asset = (path: string): string => new URL(path, base).href;
 export const money = (amount: number): string => `$${amount.toFixed(2)}`;
+export const tripKeys = ["location", "pickup", "return"] as const;
+
+export function savedTrip(): URLSearchParams {
+  const trip = new URLSearchParams();
+  try {
+    const saved = sessionStorage.getItem("driveease-trip");
+    if (saved) {
+      const data = JSON.parse(saved) as Record<string, string>;
+      for (const key of tripKeys) {
+        if (data[key]) trip.set(key, data[key]);
+      }
+    }
+  } catch {
+    // Continue without saved trip data if storage is unavailable.
+  }
+  return trip;
+}
+
 export function pageLink(page: string, id?: number): string {
   const url = new URL(`pages/${page}.html`, base);
   if (id !== undefined) url.searchParams.set("id", String(id));
-  const trip = new URLSearchParams(location.search);
-  for (const key of ["location", "pickup", "return"]) {
-    const value = trip.get(key);
+
+  const current = new URLSearchParams(location.search);
+  const saved = savedTrip();
+  for (const key of tripKeys) {
+    const value = current.get(key) || saved.get(key);
     if (value) url.searchParams.set(key, value);
   }
   return url.href;
