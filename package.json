@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "tsc && tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "build": "tsc && cp ./node_modules/preline/dist/preline.js ./dist/preline.js && tailwindcss -i ./src/input.css -o ./src/output.css --minify",
     "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "watch:ts": "tsc --watch",
     "check": "tsc --noEmit"
